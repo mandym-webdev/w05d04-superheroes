@@ -10,18 +10,18 @@
   <% end %>
 
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name %><br>
 
     <%= f.label :super_power %><br>
-    <%= f.text_field :super_power %>
+    <%= f.text_field :super_power %><br>
 
     <%= f.label :image %><br>
-    <%= f.text_field :image %>
+    <%= f.text_field :image %><br>
 
-    <%= radio_button_tag(:cape, "true") %>
-    <%= label_tag(:cape_true, "I have a cape") %>
-    <%= radio_button_tag(:cape, "false") %>
-    <%= label_tag(:cape_false, "I do not have a cape") %>
+    <%= radio_button_tag(:cape, true) %><br>
+    <%= label_tag(:cape_true, "I have a cape") %><br>
+    <%= radio_button_tag(:cape, false) %><br>
+    <%= label_tag(:cape_false, "I do not have a cape") %><br>
 
     <%= f.submit %>
 <% end %>

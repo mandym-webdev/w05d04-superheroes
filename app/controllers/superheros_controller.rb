@@ -8,6 +8,10 @@ class SuperherosController < ApplicationController
     @hero = Superhero.find(params[:id])
   end
 
+  def new
+    @hero = Superhero.new
+  end
+
   def create
     @hero = Superhero.new(hero_params)
     if @hero.save
@@ -17,7 +21,7 @@ class SuperherosController < ApplicationController
 
   private
   def hero_params
-    params.require(:hero).permit(:name, :cape, :super_power, :image)
+    params.require(:superhero).permit(:name, :cape, :super_power, :image)
   end
 
 end
