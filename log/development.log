@@ -17,3 +17,40 @@ Migrating to CreateSuperheros (20140904183439)
   [1m[35m (1.2ms)[0m  BEGIN
   [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "superheros" ("cape", "image", "name", "super_power") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["cape", "t"], ["image", "https://octodex.github.com/images/dunetocat.png"], ["name", "the rebaser"], ["super_power", "Solving git problems one commit at a time."]]
   [1m[35m (3.9ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-04 18:17:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SuperherosController#index as HTML
+  [1m[35mSuperhero Load (1.2ms)[0m  SELECT "superheros".* FROM "superheros"
+  Rendered superheros/index.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 1857ms (Views: 1805.7ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-04 18:17:23 -0400
+Processing by SuperherosController#index as HTML
+  [1m[36mSuperhero Load (1.0ms)[0m  [1mSELECT "superheros".* FROM "superheros"[0m
+  Rendered superheros/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 83ms (Views: 79.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-04 18:17:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-04 18:17:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-04 18:17:23 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-04 18:17:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-04 18:17:23 -0400
+
+
+Started GET "/superheros/1" for 127.0.0.1 at 2014-09-04 18:17:28 -0400
+Processing by SuperherosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered superheros/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.0ms)

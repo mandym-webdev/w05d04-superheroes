@@ -1,1 +1,4 @@
-index.html.erb
+<h1>Meet The Superheros</h1>
+<% @heros.each do |hero| %>
+    <h2><%= link_to hero.name, superhero_path(hero) %></h2>
+<% end %>
