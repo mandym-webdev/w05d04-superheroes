@@ -54,3 +54,167 @@ Processing by SuperherosController#show as HTML
   Parameters: {"id"=>"1"}
   Rendered superheros/show.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/superheros/1" for 127.0.0.1 at 2014-09-04 18:20:55 -0400
+Processing by SuperherosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered superheros/show.html.erb within layouts/application (32.0ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @heros.name %></h1>
+    2: <% @heros.each do |hero| %>
+    3:   <h2><%= hero.name %></h2>
+    4:   <%= image_tag hero.image %>
+  app/views/superheros/show.html.erb:1:in `_app_views_superheros_show_html_erb__1236597858025341592_69981360748960'
+
+
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.7ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.4ms)
+
+
+Started GET "/superheros/1" for 127.0.0.1 at 2014-09-04 18:22:13 -0400
+Processing by SuperherosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuperhero Load (1.0ms)[0m  SELECT  "superheros".* FROM "superheros"  WHERE "superheros"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered superheros/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @heros.name %></h1>
+    2: <% @heros.each do |hero| %>
+    3:   <h2><%= hero.name %></h2>
+    4:   <%= image_tag hero.image %>
+  app/views/superheros/show.html.erb:1:in `_app_views_superheros_show_html_erb__1236597858025341592_69981360748960'
+
+
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.0ms)
+
+
+Started GET "/superheros/1" for 127.0.0.1 at 2014-09-04 18:22:15 -0400
+Processing by SuperherosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuperhero Load (4.9ms)[0m  [1mSELECT  "superheros".* FROM "superheros"  WHERE "superheros"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered superheros/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @heros.name %></h1>
+    2: <% @heros.each do |hero| %>
+    3:   <h2><%= hero.name %></h2>
+    4:   <%= image_tag hero.image %>
+  app/views/superheros/show.html.erb:1:in `_app_views_superheros_show_html_erb__1236597858025341592_69981360748960'
+
+
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.8ms)
+
+
+Started GET "/superheros/1" for 127.0.0.1 at 2014-09-04 18:22:53 -0400
+Processing by SuperherosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuperhero Load (0.7ms)[0m  SELECT  "superheros".* FROM "superheros"  WHERE "superheros"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered superheros/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (undefined method `each' for #<Superhero:0x007f4bb0f039f0>):
+    1: <h1><%= @hero.name %></h1>
+    2: <% @hero.each do |hero| %>
+    3:   <h2><%= hero.name %></h2>
+    4:   <%= image_tag hero.image %>
+    5: <% end %>
+  app/views/superheros/show.html.erb:2:in `_app_views_superheros_show_html_erb__1236597858025341592_69981533899060'
+
+
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.8ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.5ms)
+
+
+Started GET "/superheros/1" for 127.0.0.1 at 2014-09-04 18:23:24 -0400
+Processing by SuperherosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuperhero Load (0.6ms)[0m  [1mSELECT  "superheros".* FROM "superheros"  WHERE "superheros"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered superheros/show.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `each' for "rspectacular":String):
+    1: <h1><%= @hero.name %></h1>
+    2: <% @hero.name.each do |hero| %>
+    3:   <h2><%= hero.name %></h2>
+    4:   <%= image_tag hero.image %>
+    5: <% end %>
+  app/views/superheros/show.html.erb:2:in `_app_views_superheros_show_html_erb__1236597858025341592_69981524774960'
+
+
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.6ms)
+
+
+Started GET "/superheros/1" for 127.0.0.1 at 2014-09-04 18:23:38 -0400
+Processing by SuperherosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuperhero Load (0.6ms)[0m  SELECT  "superheros".* FROM "superheros"  WHERE "superheros"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered superheros/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined method `each' for #<Superhero:0x007f4baebaa170>):
+    1: <h1><%= @hero.name %></h1>
+    2: <% @hero.each do |hero| %>
+    3:   <h2><%= hero.name %></h2>
+    4:   <%= image_tag hero.image %>
+    5: <% end %>
+  app/views/superheros/show.html.erb:2:in `_app_views_superheros_show_html_erb__1236597858025341592_69981515349840'
+
+
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.3ms)
+
+
+Started GET "/superheros/1" for 127.0.0.1 at 2014-09-04 18:25:53 -0400
+Processing by SuperherosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuperhero Load (0.9ms)[0m  [1mSELECT  "superheros".* FROM "superheros"  WHERE "superheros"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered superheros/show.html.erb within layouts/application (38.3ms)
+Completed 500 Internal Server Error in 136ms
+
+ActionView::Template::Error (undefined local variable or method `hero' for #<#<Class:0x007f4b9c087a70>:0x007f4b941bc808>):
+    1: 
+    2: <h1><%= @hero.name %></h1>
+    3:   <%= image_tag hero.image %>
+  app/views/superheros/show.html.erb:3:in `_app_views_superheros_show_html_erb__1236597858025341592_69981292058820'
+
+
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /home/mandym/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.4ms)
+
+
+Started GET "/superheros/1" for 127.0.0.1 at 2014-09-04 18:26:07 -0400
+Processing by SuperherosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuperhero Load (0.7ms)[0m  SELECT  "superheros".* FROM "superheros"  WHERE "superheros"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered superheros/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 96ms (Views: 91.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-04 18:26:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-04 18:26:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-04 18:26:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-04 18:26:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-04 18:26:07 -0400

@@ -4,6 +4,10 @@ class SuperherosController < ApplicationController
     @heros = Superhero.all
   end
 
+  def show
+    @hero = Superhero.find(params[:id])
+  end
   
 
 end
+
