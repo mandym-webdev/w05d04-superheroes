@@ -1,5 +1,7 @@
 class SuperherosController < ApplicationController
 
+before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @heros = Superhero.all
   end
