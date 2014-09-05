@@ -8,6 +8,10 @@ class SuperherosController < ApplicationController
     @hero = Superhero.find(params[:id])
   end
 
+  def edit
+    @hero = Superhero.find(params[:id])
+  end
+
   def new
     @hero = Superhero.new
   end
