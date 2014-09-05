@@ -19,6 +19,12 @@ class SuperherosController < ApplicationController
     end
   end
 
+  def update
+    @hero = Superhero.new(hero_params)
+    if @hero.update(hero_params)
+      redirect_to '/'
+  end
+
   def destroy
     @hero = Superhero.find(params[:id])
     @hero.destroy
